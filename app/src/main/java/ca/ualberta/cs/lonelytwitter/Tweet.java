@@ -3,18 +3,21 @@ package ca.ualberta.cs.lonelytwitter;
 import java.util.Date;
 
 public abstract class Tweet {
-    //class atributes
+
     String message;
 
+    String message2;
+
     Date date;
-    //construtor
+
     public void Tweet(){
 
-        message = "";
+        message = "" ;
 
     }
 
     public void setMessage(String tweetmessage){
+
         message = tweetmessage;
     }
 
@@ -24,15 +27,14 @@ public abstract class Tweet {
 
     public void setMessage(String tweetmessage, String message2){
         message = tweetmessage;
-        this.message = message2;
+        this.message2 = message2;
 
-        System.out.println("Second message has been called");
-
+        System.out.println("second setMessage has been called");
     }
 
     public abstract String getSomething();
 
-    //override
+    @Override
     public String toString(){
         return message;
     }
